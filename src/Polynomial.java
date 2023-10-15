@@ -5,10 +5,6 @@ public class Polynomial implements Cloneable
 {
     ArrayList<Double> terms;
 
-    public Polynomial()
-    {
-        this(new ArrayList<>());
-    }
 
     public Polynomial(ArrayList<Double> terms)
     {
@@ -140,10 +136,20 @@ public class Polynomial implements Cloneable
         return result.toString();
     }
 
+
+
     @Override
     public Polynomial clone()
     {
-        return new Polynomial( new ArrayList<>(terms) ) ;
+        try
+        {
+            Polynomial clone = (Polynomial) super.clone();
+            clone.terms=new ArrayList<>(terms);
+            return clone;
+        } catch (CloneNotSupportedException e)
+        {
+            throw new AssertionError();
+        }
     }
 }
 
