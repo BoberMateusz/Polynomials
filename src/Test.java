@@ -11,29 +11,11 @@ public class Test
         Polynomial a = new Polynomial(p1);
         Polynomial b = new Polynomial(p2);
 
-        System.out.println(a);
-        System.out.println(b);
+        System.out.println("a  : " +a);
+        System.out.println("b  : " +b);
 
-        System.out.println(a.add(b));
-        System.out.println(a.add(b));
-        System.out.println(a.add(b));
-        System.out.println(a.add(b));
-        System.out.println(a.subtract(b));
-        System.out.println(a.subtract(b));
-        System.out.println(a.multiply(b));
-        System.out.println(a.multiply(b));
-
-
-//
-//
-//        Polynomial a3=a.clone();
-//        a3.multiply(b);
-//        System.out.println(a3);
-
-
-
-//        System.out.println(a.add(b));
-//        System.out.println(a.subtract(b));
-//        System.out.println(a.multiply(b));
+        System.out.println("a+b: " + a.add(b));
+        System.out.println("a-b: " + a.subtract(b));
+        System.out.println("a*b: " + a.multiply(b));
     }
 }
